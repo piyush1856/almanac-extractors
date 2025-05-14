@@ -1,4 +1,4 @@
-from extractors.extractor import (
+from .extractor import (
     DataExtractor,
     GitRepoExtractor,
     GitHubRepoExtractor,
