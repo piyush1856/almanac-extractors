@@ -1,45 +1,29 @@
 from setuptools import setup, find_packages
 
-with open("README.md", "r", encoding="utf-8") as fh:
-    long_description = fh.read()
+# Read the requirements from the requirements.txt file
+with open('requirements-dev.txt') as f:
+    requirements = f.read().splitlines()
 
 setup(
-    name="almanac_extractors",
-    version="0.1.0",
-    author="piyush tyagi",
-    author_email="piyushtyagi28@hotmail.com",
-    description="Extractor of files from different providers like github, gitlab, quip etc",
-    long_description=long_description,
-    long_description_content_type="text/markdown",
-    url="https://github.com/piyush1856/almanac-extractors",
-    project_urls={
-        "Documentation": "https://github.com/piyush1856/almanac-extractors/blob/main/README.md",
-        "Source Code": "https://github.com/piyush1856/almanac-extractors",
-    },
+    name='almanac_extractors',
+    version='0.1.0',
+    author='Piyush Tyagi',
+    author_email='piyushtyagi28@hotmail.com',
+    description='A Python library for extracting files from different providers like GitHub, GitLab, Azure DevOps, and Quip.',
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
+    url='https://github.com/piyush1856/almanac_extractors',
     packages=find_packages(),
     classifiers=[
-        "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: Apache Software License",
-        "Operating System :: OS Independent"
+        'Programming Language :: Python :: 3',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
     ],
-    python_requires=">=3.10",
-    install_requires=[
-        "httpx>=0.28.1",
-        "beautifulsoup4>=4.12.0",
-        "pydantic>=2.11.3",
-        "asyncio>=3.4.3",
-        "uuid>=1.30",
-        "structlog>=23.1.0",
-        "structlog-sentry>=2.0.0",
-        "pytz>=2023.3"
-    ],
-    extras_require={
-        "dev": [
-            "pytest>=7.3.1",
-            "black>=23.3.0",
-            "isort>=5.12.0",
-            "flake8>=6.0.0",
-            "mypy>=1.3.0"
-        ]
+    python_requires='>=3.9',
+    install_requires=requirements,
+    entry_points={
+        'console_scripts': [
+            # 'command-name=package.module:function',
+        ],
     },
 )
