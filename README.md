@@ -13,14 +13,14 @@ A Python library for extracting files from different providers like GitHub, GitL
 ## Installation
 
 ```bash
-pip install almanac-extractors
+pip install almanac_extractors
 ```
 
 Or install from source:
 
 ```bash
-git clone https://github.com/piyush1856/almanac-extractors.git
-cd almanac-extractors
+git clone https://github.com/piyush1856/almanac_extractors.git
+cd almanac_extractors
 pip install -e .
 ```
 
@@ -122,8 +122,8 @@ if __name__ == "__main__":
 
 ```bash
 # Clone the repository
-git clone https://github.com/piyush1856/almanac-extractors.git
-cd almanac-extractors
+git clone https://github.com/piyush1856/almanac_extractors.git
+cd almanac_extractors
 
 # Create and activate a virtual environment
 python -m venv venv
