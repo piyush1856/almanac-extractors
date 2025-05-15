@@ -1,5 +1,5 @@
-# Re-export all classes at the package level
-from .extractor import (
+# Re-export all classes from extractors
+from extractors import (
     DataExtractor,
     GitRepoExtractor,
     GitHubRepoExtractor,
