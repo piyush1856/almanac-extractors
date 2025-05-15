@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 # Read the requirements from the requirements.txt file
-with open('requirements-dev.txt') as f:
+with open('requirements.txt') as f:
     requirements = f.read().splitlines()
 
 setup(
